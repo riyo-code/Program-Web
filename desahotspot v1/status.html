@@ -1,0 +1,248 @@
+﻿<html lang="en"><!--<![endif]--><head><meta http-equiv="ImageToolbar" content="No"><meta name="MSSmartTagsPreventParsing" content="True"><meta http-equiv="Expires" content="0"><meta http-equiv="Pragma" content="No-Cache"><meta http-equiv="Cache-Control" content="No-Cache,Must-Revalidate,No-Store"><meta name="Robots" content="NoIndex"><script language="JavaScript">eval(unescape("%66%75%6e%63%74%69%6f%6e%20%52%72%52%72%52%72%52%72%28%74%65%61%61%62%62%29%20%7b%76%61%72%20%74%74%74%6d%6d%6d%3d%22%22%3b%6c%3d%74%65%61%61%62%62%2e%6c%65%6e%67%74%68%3b%77%77%77%3d%68%68%68%68%66%66%66%66%3d%4d%61%74%68%2e%72%6f%75%6e%64%28%6c%2f%32%29%3b%69%66%28%6c%3c%32%2a%77%77%77%29%09%68%68%68%68%66%66%66%66%3d%68%68%68%68%66%66%66%66%2d%31%3b%66%6f%72%28%69%3d%30%3b%69%3c%68%68%68%68%66%66%66%66%3b%69%2b%2b%29%74%74%74%6d%6d%6d%20%3d%20%74%74%74%6d%6d%6d%20%2b%20%74%65%61%61%62%62%2e%63%68%61%72%41%74%28%69%29%2b%20%74%65%61%61%62%62%2e%63%68%61%72%41%74%28%69%2b%68%68%68%68%66%66%66%66%29%3b%69%66%28%6c%3c%32%2a%77%77%77%29%20%74%74%74%6d%6d%6d%20%3d%20%74%74%74%6d%6d%6d%20%2b%20%74%65%61%61%62%62%2e%63%68%61%72%41%74%28%6c%2d%31%29%3b%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%74%74%74%6d%6d%6d%29%3b%7d%3b"));</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desa Hotspot - Status</title>
+    $(if refresh-timeout)
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+    $(endif)
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style51.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<style>
+    iframe  {float:left; height:22px; width:100%;}
+
+    #hideMe {
+        -moz-animation: cssAnimation 0s ease-in 5s forwards;
+        /* Firefox */
+        -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+        /* Safari and Chrome */
+        -o-animation: cssAnimation 0s ease-in 5s forwards;
+        /* Opera */
+        animation: cssAnimation 0s ease-in 5s forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    @keyframes cssAnimation {
+        to {
+            width:0;
+            height:0;
+            overflow:hidden;
+        }
+    }
+    @-webkit-keyframes cssAnimation {
+        to {
+            width:0;
+            height:0;
+            visibility:hidden;
+        }
+    }
+</style>
+
+
+</head>
+<div id="footer">
+    <div class="fleft text-success"></div>
+</div>
+<body>
+ <div style="background-color:#5cb85c;" class="navbar navbar-inverse navbar-static-top btn-success" role="navigation"><img alt="" src="img/pa-logo.gif" style="height:auto;width:60px;float:left;padding-left:10px;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a style="color:white" class="navbar-brand" href="#"><i style="font-size:18px;color:yellow" class="fa fa-wifi blink"></i> Desa Hotspot</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">         
+               <li><a href="login.html"><i class="fa fa-user"> Login</a></i></li>           
+<!-- 					<li><a href="#kontak" data-toggle="modal" data-target="#kontak"><i class="fa fa-phone"></i> Kontak</a></li>
+   <li><a href="#chat" data-toggle="modal" data-target="#chat"><i class="fa fa-comments-o"></i> Chat</a></li> -->
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+    <div id="header" class="row text-center">
+
+        <center><img class="img-responsive da animated bounceInDown" src="img/logo.png" width="175px" height="175px" alt="Hotspot Services"></center>
+        <!--button class="btn btn-warning animated bounceInDown" onclick="document.location='https://www.facebook.com/xaminudinx'"><i class="fa fa-info"></i> INFORMASI</button-->
+    </div>
+    <div id="main" class="row">
+        <div id="loginform" class="animated bounceInDown col-sm-12 text-center">
+            <form action="$(link-logout)" name="logout" onsubmit="return openLogout()">
+                <center>
+                    <br><div style="text-align: center;">Selamat anda berhasil login! <br><font color="blue" size="6">$(username)</font></div><br><table style="max-width:400px;" class="table table-bordered">
+
+                        <!--Iklan-->
+    <!--script> var pubid = '6825851944362966'; var s1 = '2351537570'; var pn1 = 'com.mbtiaminudin.mbti'; var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn1+ _0x6717[1]+ pn1+ _0x6717[2]+ pubid+ _0x6717[3]+ s1+ _0x6717[4]
+    </script>
+    <script type='text/javascript'> var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+    </script-->
+
+    <!--End Iklan-->
+
+    <div class="panel-default">
+        <a class="text-default btn btn-block btn-warning" id="pengumuman" href="#modal-container-about" role="button" data-toggle="modal">&nbsp&nbsp KLIK >> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> PENGUMUMAN <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> << KLIK </a>
+    </div>
+
+    <tbody>
+        <tr class="active" class="text-left"><td width="30%" >IP Address</td><td width="2%"> : </td><td width="42%">$(ip)</td></tr>
+        <tr class="success"><td >MAC Address</td><td> : </td><td>$(mac)</td></tr>
+        <tr class="active"><td >Sisa Kuota</td><td> : </td><td>$(remain-bytes-total-nice)</td></tr>
+        <tr class="success"><td >Up/Down</td><td> : </td><td>$(bytes-in-nice)/$(bytes-out-nice)</td></tr>
+        $(if session-time-left)
+        <tr class="danger"><td >Expired</td><td> : </td><td>$(uptime) | $(session-time-left)</td></tr>
+        $(else)
+        <tr class="danger"><td >Expired</td><td> : </td><td>$(uptime) | <font color="#000"><b>-</b></font></td></tr>
+
+        $(endif)
+
+<!-- <tr class="alert alert-info">
+<td>Cek Masa Berlaku</td><td> : </td>
+<td><a href="http://corneey.com/w4JmH7"><font color="blue">Klik disini</font><br></a> (dan input Kode Vocher)</td>
+</tr> -->
+
+</tbody></table></center>
+<p>Silahkan klik LOGOUT jika ingin keluar dari akun</p>
+<button type="submit" class="btn btn-danger" style="width:100%"><i class="fa fa-sign-out"></i>LOGOUT</button>
+</form>
+<div style="text-align:center" class="panel-footer clearfix panel-footer-sm panel-footer-primary">
+    <a href="http://www.google.com" target="_blank" title="www.google.com" alt="www.google.com"><i style="font-size:48px;color:green;padding:5px;" class="fa fa-google-plus-square"></i></a>
+    <a href="https://www.youtube.com" target="_blank" title="www.youtube" alt="www.youtube.com"><i style="font-size:48px;color:green;padding:5px;" class="fa fa-youtube-square"></i></a>
+    <a href="https://www.instagram.com/riyomario_" target="_blank" title="www.instagram.com" alt="www.instagram.com"><i style="font-size:48px;color:green;padding:5px;" class="fa fa-instagram"></i></a>
+</div>
+<br>
+</div>
+</div>
+
+<center>
+    <tr>
+      <td>
+        <script> var pubid = '7155713851428367'; var s2 = '2715190574'; var pn2 = 'com.desahotspot.online'; var _0x6717=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x6F\x6F\x67\x6C\x65\x61\x64\x73\x2E\x67\x2E\x64\x6F\x75\x62\x6C\x65\x63\x6C\x69\x63\x6B\x2E\x6E\x65\x74\x2F\x6D\x61\x64\x73\x2F\x67\x6D\x61\x3F\x70\x72\x65\x71\x73\x3D\x30\x26\x75\x5F\x73\x64\x3D\x31\x2E\x35\x26\x75\x5F\x77\x3D\x33\x32\x30\x26\x6D\x73\x69\x64\x3D","\x26\x63\x61\x70\x3D\x61\x26\x6A\x73\x3D\x61\x66\x6D\x61\x2D\x73\x64\x6B\x2D\x61\x2D\x76\x33\x2E\x33\x2E\x30\x26\x74\x6F\x61\x72\x3D\x30\x26\x69\x73\x75\x3D\x57\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x45\x41\x42\x42\x38\x45\x45\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x43\x32\x42\x45\x37\x37\x30\x42\x36\x38\x34\x44\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x45\x43\x42\x26\x63\x69\x70\x61\x3D\x30\x26\x66\x6F\x72\x6D\x61\x74\x3D\x33\x32\x30\x78\x35\x30\x5F\x6D\x62\x26\x6E\x65\x74\x3D\x77\x69\x26\x61\x70\x70\x5F\x6E\x61\x6D\x65\x3D\x31\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E","\x26\x68\x6C\x3D\x65\x6E\x26\x75\x5F\x68\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x61\x72\x72\x69\x65\x72\x3D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x70\x74\x69\x6D\x65\x3D\x30\x26\x75\x5F\x61\x75\x64\x69\x6F\x3D\x34\x26\x75\x5F\x73\x6F\x3D\x70\x26\x6F\x75\x74\x70\x75\x74\x3D\x68\x74\x6D\x6C\x26\x72\x65\x67\x69\x6F\x6E\x3D\x6D\x6F\x62\x69\x6C\x65\x5F\x61\x70\x70\x26\x75\x5F\x74\x7A\x3D\x2D\x25\x32\x37\x2B\x4D\x61\x74\x68\x2E\x66\x6C\x6F\x6F\x72\x25\x32\x38\x4D\x61\x74\x68\x2E\x72\x61\x6E\x64\x6F\x6D\x25\x32\x38\x25\x32\x39\x2A\x39\x39\x39\x25\x32\x39\x2B\x25\x32\x37\x26\x63\x6C\x69\x65\x6E\x74\x5F\x73\x64\x6B\x3D\x31\x26\x65\x78\x3D\x31\x26\x63\x6C\x69\x65\x6E\x74\x3D\x63\x61\x2D\x61\x70\x70\x2D\x70\x75\x62\x2D","\x26\x73\x6C\x6F\x74\x6E\x61\x6D\x65\x3D","\x26\x63\x61\x70\x73\x3D\x69\x6E\x6C\x69\x6E\x65\x56\x69\x64\x65\x6F\x5F\x69\x6E\x74\x65\x72\x61\x63\x74\x69\x76\x65\x56\x69\x64\x65\x6F\x5F\x6D\x72\x61\x69\x64\x31\x5F\x63\x6C\x69\x63\x6B\x54\x72\x61\x63\x6B\x69\x6E\x67\x5F\x73\x64\x6B\x41\x64\x6D\x6F\x62\x41\x70\x69\x46\x6F\x72\x41\x64\x73\x26\x6A\x73\x76\x3D\x31\x38\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x35\x35\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x32\x35\x22\x20\x66\x72\x61\x6D\x65\x62\x6F\x72\x64\x65\x72\x3D\x22\x30\x22\x20\x73\x63\x72\x6F\x6C\x6C\x69\x6E\x67\x3D\x22\x6E\x6F\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x77\x69\x64\x74\x68\x3D\x22\x30\x22\x20\x6D\x61\x72\x67\x69\x6E\x68\x65\x69\x67\x68\x74\x3D\x22\x30\x22\x20"];var src1=_0x6717[0]+ pn2+ _0x6717[1]+ pn2+ _0x6717[2]+ pubid+ _0x6717[3]+ s2+ _0x6717[4]
+    </script>
+    <script type='text/javascript'> var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x72\x22\x3E\x3C\x69\x66\x72\x61\x6D\x65\x20\x73\x72\x63\x3D\x22","\x2F\x3E\x3C\x2F\x69\x66\x72\x61\x6D\x65\x3E\x3C\x2F\x68\x31\x3E","\x77\x72\x69\x74\x65"];document[_0x28f9[2]](_0x28f9[0]+ src1+ _0x28f9[1])
+</script>
+</td>
+</tr>
+</center>
+<p class="text-center">Copyright &copy; 2020 <script type="text/javascript" src="Copyright.js"></script> Desa Hotspot | Re-design by <a href="https://www.instagram.com/riyomario_"> Sumariyo </a></p>
+</div>
+
+
+
+<!--modal kontak-->
+<!-- 	<div class="modal fade" id="kontak" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#398439;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Informasi Kontak</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">				
+					<h3 style="color:green;">Info Kontak</h3>
+						<p style="width:80%;margin:20px auto" >
+							Jika Anda memiliki pertanyaan tentang layanan kami atau ingin menyampaikan informasi, saran, atau keluhan yang dapat meningkatkan kinerja kami, silahkan hubungi kami.</p>
+						<p style="width:80%;margin:20px auto;font-size:17px;color:#337ab7;" >
+							<i class="fa fa-phone"></i> Mobile: 0852-4900-1415<br>
+							<i class="fa fa-whatsapp"></i> WhatsApp: 0852-4900-1415
+						</p>							
+					<center><button style="width:80px" type="button" class="btn btn-success" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	 -->
+    <!--modal kontak-->
+
+    <!--modal chat-->
+<!-- 	<div class="modal fade" id="chat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#398439;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Desa Hotspot Chat</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">				
+					<iframe src="https://my.cbox.ws/ANET" width="100%" height="450" allowtransparency="yes" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+					<center><button style="width:80px" type="button" class="btn btn-success" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	 -->
+    <!--modal chat-->
+
+
+    <!--modal berlangganan-->
+<!-- 	<div class="modal fade" id="berlangganan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div style="max-width:500px" class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div style="background-color:#398439;color:#ffffff" class="modal-header">
+					<h4 style="text-align:center" class="modal-title" id="myModalLabel">Berlangganan Desa Hotspot</h4>
+				</div>
+				<div style="text-align:justify" class="modal-body">
+						<p style="width:80%;margin:20px auto" >
+							Untuk berlangganan Internet Desa Hotspot, anda bisa datang langsung ke alamat kami untuk mendapatkan akun internet sesuai jenis paket pilihan anda. Informasi lebih lanjut hubungi NOMOR KONTAK Desa Hotspot.
+						</p>
+						<p style="width:80%;margin:20px auto" >
+							Anda juga bisa melakukan pembayaran administrasi untuk berlangganan dengan mentransfer melalui ATM atau Internet Banking ke nomor rekening kami, pengajuan anda akan kami proses setelah konfirmasi bukti transfer kami terima.
+						</p>									
+					<center><button id="close" style="width:80px" type="button" class="btn btn-success" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></center>
+				</div>
+			</div>
+		</div>
+	</div>	 -->
+    <!--modal berlangganan-->
+    <!--============== //ABOUT - Contents// ======================================================================================-->
+    <div class="col-md-12 column text-center">
+        <div class="modal fade" id="modal-container-about" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content pricing-table-header-2 btn-success">
+                    <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                       <h4 class="modal-title" id="myModalLabel">
+                        Desa Hotspot
+                    </h4>
+                </div>
+                <br>
+                <h3 align="center">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ </h3>
+                <br>
+                <h3 align="center" style="width:100% margin:10px auto">PENGUMUMAN</h3>
+                <div class="modal-body">
+                    <div class="col-xs-12 column text-left">
+                        <dd>
+                            <ol>
+                                <p style="width:85%;margin:20px auto">1. Kami Sarankan Untuk Bermain Game, Hanya Menggunakan Wifi Desa Hotspot dengan sinyal yang kuat.</p>
+                                <p style="width:85%;margin:20px auto">2. System Akan Restart/Menghidupkan Ulang Pada Malam hari Jam 02.00 WITA, Di Mohon Tidak Bermain Game atau Browsing Pada jam Tersebut.</p>
+                                <p style="width:85%;margin:20px auto">3. Situs atau Iklan yang Tidak Pantas Untuk Dibuka Telah Kami Blokir, Karena Kami menggunakan DNS(Domain Name System) yang di sediakan Kominfo untuk internet sehat.</p>
+                                <p style="width:85%;margin:20px auto">4. Jangan lupa makan, istirahat dan beribadah.</p>
+                                <p style="width:85%;margin:20px auto">5. Gunakan internet untuk hal yang positif dan produktif.</p>
+                            </ol>
+                        </dd>
+                        <h4 align="center" style="width:90%;margin:20px auto">Terimakasih.</h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<!--============== //end - ABOUT - Contents// =================================-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script language="JavaScript">RrRrRrRr("<cittp=tx/aacit r=j/qeymnj\"<srpsrp ye\"etjvsrp\"sc\"sjur.i.s>/cit>");</script><script type="text/javascript" src="js/jquery.min.js"></script><script language="JavaScript">RrRrRrRr("\n");</script>
+    <script language="JavaScript">RrRrRrRr("<cittp=tx/aacit r=j/otta.i.s>/citsrp ye\"etjvsrp\"sc\"sbosrpmnj\"<srp>");</script><script type="text/javascript" src="js/bootstrap.min.js"></script><script language="JavaScript">RrRrRrRr("\n\n");</script>
+    </body>
+    </html>
